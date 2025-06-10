@@ -70,7 +70,15 @@ class UserSerializer(serializers.ModelSerializer):
 
         send_mail(
             subject='LMS Teacher Verification',
-            message=f'Hi {user.first_name},\n\nYoy have been added as a teacher .\nYour temporary password is:{temp_password}\n\nPlease verify your account using this link:\n{verify_url}\n\n After verification ,you can set a new password.',
+            message = (
+    f"Hi {user.first_name},\n\n"
+    "You have been added as a teacher to our platform.\n"
+    f"Your temporary password is: {temp_password}\n\n"
+    f"To activate your account, please verify it using the following link:\n{verify_url}\n\n"
+    "After verification, you can log in using the above password. We recommend changing it after your first login for security reasons.\n\n"
+    "Welcome aboard!\n"
+),
+
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=[user.email],
             fail_silently=False,
