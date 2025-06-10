@@ -176,11 +176,7 @@ EMAIL_HOST_USER = 'nazeersk2003@gmail.com'         # your Gmail address
 EMAIL_HOST_PASSWORD = 'rrvszkeqgyknblov'        # your Gmail app password
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # React Vite dev server
-]
+CORS_ALLOWED_ORIGINS = ["*"]
 
 
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:5173",
-]
+CSRF_TRUSTED_ORIGINS = ["*"]
