@@ -1,0 +1,42 @@
+# Ignore Python bytecode files
+_pycache_/
+*.pyc
+
+# Ignore the virtual environment
+venv/
+env/
+resumes/
+# Ignore database files
+db.sqlite3
+
+# Ignore local settings (you might have your own settings for production)
+settings_local.py
+
+# Ignore media and static files (these are usually served separately in production)
+media/
+static/
+
+# Ignore logs and other generated files
+logs/
+*.log
+*.pot
+
+# Ignore IDE or editor-specific files
+.vscode/
+.idea/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment variables file (if you use one)
+.env
+
+
+# Ignore SQLite database file
+
+db.sqlite3

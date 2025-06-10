@@ -1,0 +1,15 @@
+{
+    "Academic Subjects": ["Mathematics", "Physics", "Biology", "Computer Science", "History"],
+    "Business": ["Entrepreneurship", "Business Strategy", "Sales"],
+    "Finance & Accounting": ["Accounting", "Financial Analysis", "Taxation"],
+    "IT & Software": ["Software Development", "Cybersecurity", "Cloud Computing"],
+    "Personal Development": ["Time Management", "Self-Confidence", "Mindfulness"],
+    "Office Productivity": ["Excel", "Word", "Google Workspace"],
+    "Marketing": ["Digital Marketing", "SEO", "Branding"],
+    "Photography & Video": ["Photography", "Video Editing", "YouTube"],
+    "Lifestyle": ["Cooking", "Travel", "Gardening"],
+    "Design": ["Graphic Design", "UI/UX", "Logo Design"],
+    "Health & Fitness": ["Yoga", "Fitness Training", "Nutrition"],
+    "Music": ["Guitar", "Piano", "Music Theory"]
+  }
+  
