@@ -176,7 +176,7 @@ EMAIL_HOST_USER = 'nazeersk2003@gmail.com'         # your Gmail address
 EMAIL_HOST_PASSWORD = 'rrvszkeqgyknblov'        # your Gmail app password
 
 
-CORS_ALLOWED_ORIGINS = ["*"]
+CORS_ALLOWED_ORIGINS = True
 
 
-CSRF_TRUSTED_ORIGINS = ["*"]
+CSRF_TRUSTED_ORIGINS = True
