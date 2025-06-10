@@ -177,6 +177,6 @@ EMAIL_HOST_PASSWORD = 'rrvszkeqgyknblov'        # your Gmail app password
 
 
 CORS_ALLOW_ALL_ORIGINS = True
-
+ALLOWED_HOSTS=['*']
 
 CSRF_TRUSTED_ALL_ORIGINS = True
