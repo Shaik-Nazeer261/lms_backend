@@ -2082,16 +2082,12 @@ class CourseCurriculumCompleteView(APIView):
 
 
                     # File field keys
-                    video_key = content_data.get("video")
-                    pdf_key = content_data.get("pdf")
-                    attached_key = content_data.get("attached_file")
-                    lecture_notes_key = content_data.get("lecture_notes_file")
+                    # Fetch directly from FILES using expected keys (must match your FormData field names)
+                    video_file = request.FILES.get('video')
+                    pdf_file = request.FILES.get('pdf')
+                    attached_file = request.FILES.get('attached_file')
+                    lecture_notes_file = request.FILES.get('lecture_notes_file')
 
-                    # File objects
-                    video_file = request.FILES.get(video_key) if video_key else None
-                    pdf_file = request.FILES.get(pdf_key) if pdf_key else None
-                    attached_file = request.FILES.get(attached_key) if attached_key else None
-                    lecture_notes_file = request.FILES.get(lecture_notes_key) if lecture_notes_key else None
 
                     # Create a single LessonContent object
                     lesson_content = LessonContent.objects.create(
