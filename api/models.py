@@ -43,7 +43,7 @@ class Student(models.Model):
     website = models.URLField(blank=True, null=True)
     social_links = models.JSONField(default=dict)
     language = models.CharField(max_length=50, blank=True, null=True)
-    profile_picture = models.ImageField()
+    profile_picture = models.ImageField(blank=True, null=True)
 
     def __str__(self):
         return self.user.username
