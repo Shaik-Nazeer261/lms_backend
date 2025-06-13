@@ -196,7 +196,8 @@ class StudentProgress(models.Model):
         unique_together = ('student', 'course')
 
     def __str__(self):
-        return f"{self.student.username} - {self.course.title}"
+        return f"{self.student.user.username} - {self.course.title}"
+
 
 # Quiz Model
 class Quiz(models.Model):
@@ -270,7 +271,8 @@ class AssignmentSubmission(models.Model):
         unique_together = ('student', 'assignment')  # Ensures unique submission per student-assignment
 
     def __str__(self):
-        return f"{self.student.username} - {self.assignment.question[:30]}"
+        return f"{self.student.user.username} - {self.assignment.question[:30]}"
+
     
 
 
