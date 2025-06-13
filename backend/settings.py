@@ -59,7 +59,17 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',  #  Add this line if missing
     'corsheaders',
     'api',
+    'cloudinary',
+    'cloudinary_storage',
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME', default='your_cloud_name'),
+    'API_KEY': config('CLOUDINARY_API_KEY', default='your_api_key'),
+    'API_SECRET': config('CLOUDINARY_API_SECRET', default='your_api_secret'),
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
