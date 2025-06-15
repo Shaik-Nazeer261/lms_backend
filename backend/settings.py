@@ -59,17 +59,21 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',  #  Add this line if missing
     'corsheaders',
     'api',
-    'cloudinary',
-    'cloudinary_storage',
+    'storages',
 ]
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME', default='your_cloud_name'),
-    'API_KEY': config('CLOUDINARY_API_KEY', default='your_api_key'),
-    'API_SECRET': config('CLOUDINARY_API_SECRET', default='your_api_secret'),
-}
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = config('AWS_S3_REGION_NAME')  # e.g. 'us-east-1'
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# Optional Settings
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+AWS_QUERYSTRING_AUTH = False  # Public file URLs
+
+# Use S3 for media file storage
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
